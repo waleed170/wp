@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waleed's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="description" content="A portfolio website showcasing my skills, projects, and contact information.">
+  <meta name="keywords" content="portfolio, web developer, React, Node.js, JavaScript">
+  <meta name="author" content="Your Name">
+  <link rel="icon" type="image/x-icon" href="7867852.png">
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+
+  <header>
+    <div class="container">
+      <h1>Waleed Monim</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>Hello! I'm a passionate web developer with experience in building modern, responsive websites. I love turning ideas into reality through code.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">C++</div>
+          <div class="skill">React</div>
+          <div class="skill">Python</div>
+          <div class="skill">Git</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="experience-grid">
+          <div class="experience">
+            <h3>Web Developer</h3>
+            <p class="company">TechWithWarriors</p>
+            <p class="duration">2024</p>
+            <p>Completed a 4 week internship developing websites. Created a personal portfolio website. Developed a task manager website.</p>
+          </div>
+          <div class="experience">
+            <h3>Frontend Developer Intern</h3>
+            <p class="company">Social Swirl</p>
+            <p class="duration">2024</p>
+            <p>Completed an intensive 7-day bootcamp focused on HTML, CSS, JavaScript, React, Tailwind, Flowbite. Worked on assignments and developed minor projects as well as 1 major project. Gained hands-on experience in Frontend web development, react routing, Flex.</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-container">
+          <button class="scroll-arrow left-arrow" aria-label="Scroll left">&#10094;</button>
+          <div class="projects-grid">
+            <div class="project">
+              <h3>Resume Builder</h3>
+              <p>This resume builder creates professional, customizable CVs with real-time previews, multiple templates, and dark/light mode for a streamlined job application experience.</p>
+              <a href="https://waleed170.github.io/resume-builder/" target="_blank" class="project-link">Link (Deployed)</a>
+            </div>
+            <div class="project">
+              <h3>FYP-Fake News Detection</h3>
+              <p>ML-powered web app (Python) that verifies news using logistic regression, TF-IDF, and web scraping, outputting "Real/Fake" confidence scores.</p>
+            </div>
+            <div class="project">
+              <h3>Ecommerce Web Application with Authentication</h3>
+              <p>A responsive ecommerce application built with React and Tailwind enabling users to register, authenticate, and interact with the products seamlessly.</p>
+              <a href="https://github.com/waleed170/12_ECOMMERCE_WEB" target="_blank" class="project-link">Link (Repository)</a>
+            </div>
+            
+            <div class="project">
+              <h3>Portfolio Web Application</h3>
+              <p>A sleek and intuitive web application showing minimalist but stylish portfolio of the user.</p>
+              <a href="https://waleed170.github.io/Portfolio/" target="_blank" class="project-link">Link (Deployed)</a>
+            </div>
+            <div class="project">
+              <h3>Task Manager</h3>
+              <p>This lightweight Task Manager app lets users add, edit, complete, and delete tasks, with localStorage persistence and a clean, intuitive interface.</p>
+              <a href="https://waleed170.github.io/Task-02/" target="_blank" class="project-link">Link (Deployed)</a>
+            </div>
+            <div class="project">
+              <h3>Hotel Network Design</h3>
+              <p>The Hotel Network Design is a sophisticated project executed using Cisco Packet Tracer.</p>
+            </div>
+          </div>
+          <button class="scroll-arrow right-arrow" aria-label="Scroll right">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section">
+      <div class="container">
+        <h2>Certifications</h2>
+        <div class="certifications-grid">
+          <div class="certification">
+            <div class="certification-header">
+              <h3>Python</h3>
+            </div>
+            <p class="issuer">Harvard</p>
+            <p class="date">Issued: 2023</p>
+            <a href="https://certificates.cs50.io/7548473a-3413-4f26-af27-bae5e5b9037d.pdf?size=letter" target="_blank" class="certification-link">View Certificate</a>
+          </div>
+          <div class="certification">
+            <div class="certification-header">
+              <h3>Machine Learning Algorithms</h3>
+            </div>
+            <p class="issuer">Great Learning</p>
+            <p class="date">Issued: 2024</p>
+            <a href="https://drive.google.com/file/d/1zei5064_qfTJ2GYdOp8UzhsTTitLoRbM/view?usp=sharing" target="_blank" class="certification-link">View Certificate</a>
+          </div>
+          <div class="certification">
+            <div class="certification-header">
+              <h3>Web Developer</h3>
+            </div>
+            <p class="issuer">TechWithWarriors</p>
+            <p class="date">Issued: 2024</p>
+            <a href="https://drive.google.com/file/d/1IZoVPih71DxVjVuekV7Vzk9hEmXMtUEc/view?usp=drive_link" target="_blank" class="certification-link">View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>You can reach me at: <a href="mailto:waleedmonim18@gmail.com">waleedmonim18@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" title="Go to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
