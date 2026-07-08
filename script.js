@@ -15,6 +15,34 @@ themeToggle.addEventListener('click', () => {
   localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 });
 
+// Hamburger Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('nav ul');
+
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+
+  // Close mobile menu when clicking on a link
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 900) {
+        navMenu.classList.remove('show');
+      }
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 900 && navMenu.classList.contains('show')) {
+      if (!e.target.closest('nav') && !e.target.closest('.menu-toggle')) {
+        navMenu.classList.remove('show');
+      }
+    }
+  });
+}
+
 // Particle System with Connecting Lines
 const canvas = document.getElementById('particle-canvas');
 const ctx = canvas.getContext('2d');
@@ -117,41 +145,49 @@ backToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Project carousel functionality
-const projectsGrid = document.querySelector('.projects-grid');
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
+// Carousel functionality for all sections
+function initCarousel(containerSelector, gridSelector, leftArrowSelector, rightArrowSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
 
-function updateArrowVisibility() {
-  if (projectsGrid.scrollLeft <= 0) {
-    leftArrow.classList.add('hidden');
-  } else {
-    leftArrow.classList.remove('hidden');
+  const grid = container.querySelector(gridSelector);
+  const leftArrow = container.querySelector(leftArrowSelector);
+  const rightArrow = container.querySelector(rightArrowSelector);
+
+  if (!grid || !leftArrow || !rightArrow) return;
+
+  function updateArrowVisibility() {
+    if (grid.scrollLeft <= 0) {
+      leftArrow.classList.add('hidden');
+    } else {
+      leftArrow.classList.remove('hidden');
+    }
+
+    if (grid.scrollLeft >= grid.scrollWidth - grid.clientWidth - 1) {
+      rightArrow.classList.add('hidden');
+    } else {
+      rightArrow.classList.remove('hidden');
+    }
   }
 
-  if (projectsGrid.scrollLeft >= projectsGrid.scrollWidth - projectsGrid.clientWidth - 1) {
-    rightArrow.classList.add('hidden');
-  } else {
-    rightArrow.classList.remove('hidden');
-  }
+  // Initial check after a small delay to ensure layout is complete
+  setTimeout(updateArrowVisibility, 100);
+
+  grid.addEventListener('scroll', updateArrowVisibility);
+
+  leftArrow.addEventListener('click', () => {
+    grid.scrollBy({ left: -500, behavior: 'smooth' });
+  });
+
+  rightArrow.addEventListener('click', () => {
+    grid.scrollBy({ left: 500, behavior: 'smooth' });
+  });
+
+  window.addEventListener('resize', updateArrowVisibility);
 }
 
-updateArrowVisibility();
-
-projectsGrid.addEventListener('scroll', updateArrowVisibility);
-
-leftArrow.addEventListener('click', () => {
-  projectsGrid.scrollBy({
-    left: -500,
-    behavior: 'smooth'
-  });
-});
-
-rightArrow.addEventListener('click', () => {
-  projectsGrid.scrollBy({
-    left: 500,
-    behavior: 'smooth'
-  });
-});
-
-window.addEventListener('resize', updateArrowVisibility);
+// Initialize all carousels
+initCarousel('.skills-container', '.skills-grid', '.skills-left-arrow', '.skills-right-arrow');
+initCarousel('.experience-container', '.experience-grid', '.experience-left-arrow', '.experience-right-arrow');
+initCarousel('.projects-container', '.projects-grid', '.projects-left-arrow', '.projects-right-arrow');
+initCarousel('.certifications-container', '.certifications-grid', '.certifications-left-arrow', '.certifications-right-arrow');
