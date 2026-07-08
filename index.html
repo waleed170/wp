@@ -17,7 +17,8 @@
 
   <header>
     <div class="container">
-      <h1>Waleed Monim</h1>
+      <h1>WALEED MONIM</h1>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
@@ -26,10 +27,9 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#contact">Contact</a></li>
-          <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+          <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
         </ul>
       </nav>
-      
     </div>
   </header>
 
@@ -37,20 +37,30 @@
     <section id="about" class="section">
       <div class="container">
         <h2>About Me</h2>
-        <p>Hello! I'm a passionate web developer with experience in building modern, responsive websites. I love turning ideas into reality through code.</p>
+        <p>A Detail-oriented SQA Engineer with experience testing web and mobile applications to ensure functionality, usability, and performance. Skilled in identifying and documenting defects, validating fixes, and collaborating with developers, clients, and stakeholders to deliver high-quality software. Backed by a web development background, enabling a strong understanding of application architecture, user experience, and quality-focused software delivery.</p>
       </div>
     </section>
 
     <section id="skills" class="section">
       <div class="container">
         <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill">HTML</div>
-          <div class="skill">CSS</div>
-          <div class="skill">C++</div>
-          <div class="skill">React</div>
-          <div class="skill">Python</div>
-          <div class="skill">Git</div>
+        <div class="carousel-container skills-container">
+          <button class="scroll-arrow left-arrow skills-left-arrow" aria-label="Scroll left">&#10094;</button>
+          <div class="skills-grid">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">C++</div>
+            <div class="skill">React</div>
+            <div class="skill">Python</div>
+            <div class="skill">Git</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Tailwind CSS</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">SQL</div>
+            <div class="skill">MongoDB</div>
+          </div>
+          <button class="scroll-arrow right-arrow skills-right-arrow" aria-label="Scroll right">&#10095;</button>
         </div>
       </div>
     </section>
@@ -58,20 +68,34 @@
     <section id="experience" class="section">
       <div class="container">
         <h2>Experience</h2>
-        <div class="experience-grid">
-          <div class="experience">
-            <h3>Web Developer</h3>
-            <p class="company">TechWithWarriors</p>
-            <p class="duration">2024</p>
-            <p>Completed a 4 week internship developing websites. Created a personal portfolio website. Developed a task manager website.</p>
+        <div class="carousel-container experience-container">
+          <button class="scroll-arrow left-arrow experience-left-arrow" aria-label="Scroll left">&#10094;</button>
+          <div class="experience-grid">
+            <div class="experience">
+              <h3>SQA Engineer</h3>
+              <p class="company">Punch Digital Agency</p>
+              <p class="duration">Oct 2025 - Jul 2026</p>
+              <p>Performed SQA for client web, Android, and iOS applications including 
+                <a href="https://lookingtohire.com/" target="_blank" class="project-link">Looking To Hire</a>, 
+                <a href="https://yachtcrewcenter.com/" target="_blank" class="project-link">Yacht Crew Center</a>, 
+                <a href="https://stretchnote.com/" target="_blank" class="project-link">Stretch Note</a>, and 
+                <a href="https://hippiekitgreenproducts.com/" target="_blank" class="project-link">Hippiekit</a>. 
+                Executed functional, regression, UI, and cross-platform testing while reporting defects, verifying fixes, and collaborating with developers and clients throughout the release cycle.</p>
+            </div>
+            <div class="experience">
+              <h3>Web Developer</h3>
+              <p class="company">TechWithWarriors</p>
+              <p class="duration">Sep 2024 - Oct 2024</p>
+              <p>Completed a 4 week internship developing websites. Created a personal portfolio website. Developed a task manager website.</p>
+            </div>
+            <div class="experience">
+              <h3>Frontend Developer</h3>
+              <p class="company">Social Swirl</p>
+              <p class="duration">Aug 2024</p>
+              <p>Completed an intensive 7-day bootcamp focused on HTML, CSS, JavaScript, React, Tailwind, Flowbite. Worked on assignments and developed minor projects as well as 1 major project. Gained hands-on experience in Frontend web development, react routing, Flex.</p>
+            </div>
           </div>
-          <div class="experience">
-            <h3>Frontend Developer Intern</h3>
-            <p class="company">Social Swirl</p>
-            <p class="duration">2024</p>
-            <p>Completed an intensive 7-day bootcamp focused on HTML, CSS, JavaScript, React, Tailwind, Flowbite. Worked on assignments and developed minor projects as well as 1 major project. Gained hands-on experience in Frontend web development, react routing, Flex.</p>
-          </div>
-          
+          <button class="scroll-arrow right-arrow experience-right-arrow" aria-label="Scroll right">&#10095;</button>
         </div>
       </div>
     </section>
@@ -79,8 +103,8 @@
     <section id="projects" class="section">
       <div class="container">
         <h2>Projects</h2>
-        <div class="projects-container">
-          <button class="scroll-arrow left-arrow" aria-label="Scroll left">&#10094;</button>
+        <div class="carousel-container projects-container">
+          <button class="scroll-arrow left-arrow projects-left-arrow" aria-label="Scroll left">&#10094;</button>
           <div class="projects-grid">
             <div class="project">
               <h3>Resume Builder</h3>
@@ -92,11 +116,25 @@
               <p>ML-powered web app (Python) that verifies news using logistic regression, TF-IDF, and web scraping, outputting "Real/Fake" confidence scores.</p>
             </div>
             <div class="project">
-              <h3>Ecommerce Web Application with Authentication</h3>
-              <p>A responsive ecommerce application built with React and Tailwind enabling users to register, authenticate, and interact with the products seamlessly.</p>
-              <a href="https://github.com/waleed170/12_ECOMMERCE_WEB" target="_blank" class="project-link">Link (Repository)</a>
+              <h3>TicTacToe</h3>
+              <p>Interactive Tic-Tac-Toe with smart AI opponent, two-player mode, and beautiful animations built with React and Tailwind CSS.</p>
+              <a href="https://tictactoe-ten-alpha.vercel.app" target="_blank" class="project-link">Link (Deployed)</a>
             </div>
-            
+            <div class="project">
+              <h3>Tron-inspired Game</h3>
+              <p>A Tron-inspired lightcycle game featuring two-player controls, computer AI opponent, and a sleek neon-styled interface.</p>
+              <a href="https://waleed170.github.io/tron/" target="_blank" class="project-link">Link (Deployed)</a>
+            </div>
+            <div class="project">
+              <h3>Ecommerce Web Application Design</h3>
+              <p>A responsive ecommerce application built with React and Tailwind enabling users to register, authenticate, and interact with the products seamlessly.</p>
+              <a href="https://12-ecommerce-web.vercel.app/" target="_blank" class="project-link">Link (Deployed)</a>
+            </div>
+            <div class="project">
+              <h3>Brand E-commerce Website</h3>
+              <p>A premium hair spray e-commerce website featuring product listings, shopping cart, testimonials, and a responsive design for an optimal user experience.</p>
+              <a href="https://waleed170.github.io/hairmist1/" target="_blank" class="project-link">Link (Deployed)</a>
+            </div>
             <div class="project">
               <h3>Portfolio Web Application</h3>
               <p>A sleek and intuitive web application showing minimalist but stylish portfolio of the user.</p>
@@ -112,7 +150,7 @@
               <p>The Hotel Network Design is a sophisticated project executed using Cisco Packet Tracer.</p>
             </div>
           </div>
-          <button class="scroll-arrow right-arrow" aria-label="Scroll right">&#10095;</button>
+          <button class="scroll-arrow right-arrow projects-right-arrow" aria-label="Scroll right">&#10095;</button>
         </div>
       </div>
     </section>
@@ -120,31 +158,51 @@
     <section id="certifications" class="section">
       <div class="container">
         <h2>Certifications</h2>
-        <div class="certifications-grid">
-          <div class="certification">
-            <div class="certification-header">
-              <h3>Python</h3>
+        <div class="carousel-container certifications-container">
+          <button class="scroll-arrow left-arrow certifications-left-arrow" aria-label="Scroll left">&#10094;</button>
+          <div class="certifications-grid">
+            <div class="certification">
+              <div class="certification-header">
+                <h3>Python</h3>
+              </div>
+              <p class="issuer">Harvard</p>
+              <p class="date">Issued: 2023</p>
+              <a href="https://certificates.cs50.io/7548473a-3413-4f26-af27-bae5e5b9037d.pdf?size=letter" target="_blank" class="certification-link">View Certificate</a>
             </div>
-            <p class="issuer">Harvard</p>
-            <p class="date">Issued: 2023</p>
-            <a href="https://certificates.cs50.io/7548473a-3413-4f26-af27-bae5e5b9037d.pdf?size=letter" target="_blank" class="certification-link">View Certificate</a>
-          </div>
-          <div class="certification">
-            <div class="certification-header">
-              <h3>Machine Learning Algorithms</h3>
+            <div class="certification">
+              <div class="certification-header">
+                <h3>Machine Learning Algorithms</h3>
+              </div>
+              <p class="issuer">Great Learning</p>
+              <p class="date">Issued: 2024</p>
+              <a href="https://drive.google.com/file/d/1zei5064_qfTJ2GYdOp8UzhsTTitLoRbM/view?usp=sharing" target="_blank" class="certification-link">View Certificate</a>
             </div>
-            <p class="issuer">Great Learning</p>
-            <p class="date">Issued: 2024</p>
-            <a href="https://drive.google.com/file/d/1zei5064_qfTJ2GYdOp8UzhsTTitLoRbM/view?usp=sharing" target="_blank" class="certification-link">View Certificate</a>
-          </div>
-          <div class="certification">
-            <div class="certification-header">
-              <h3>Web Developer</h3>
+           <div class="certification">
+              <div class="certification-header">
+                <h3>Frontend Development</h3>
+              </div>
+              <p class="issuer">Social Swirl</p>
+              <p class="date">Issued: 2024</p>
+              <a href="https://drive.google.com/file/d/149_hMM7RJ9qhc4rSoXBqQgMyNnERQaby/view?usp=sharing" target="_blank" class="certification-link">View Certificate</a>
             </div>
-            <p class="issuer">TechWithWarriors</p>
-            <p class="date">Issued: 2024</p>
-            <a href="https://drive.google.com/file/d/1IZoVPih71DxVjVuekV7Vzk9hEmXMtUEc/view?usp=drive_link" target="_blank" class="certification-link">View Certificate</a>
+            <div class="certification">
+              <div class="certification-header">
+                <h3>Web Developer</h3>
+              </div>
+              <p class="issuer">TechWithWarriors</p>
+              <p class="date">Issued: 2024</p>
+              <a href="https://drive.google.com/file/d/1IZoVPih71DxVjVuekV7Vzk9hEmXMtUEc/view?usp=drive_link" target="_blank" class="certification-link">View Certificate</a>
+            </div>
+            <div class="certification">
+              <div class="certification-header">
+                <h3>ISPR Summer Internship</h3>
+              </div>
+              <p class="issuer">ISPR</p>
+              <p class="date">Issued: 2025</p>
+              <a href="https://drive.google.com/file/d/1BNJkDmUrCX3TwvTGvcRRTpFPH-U9uspz/view?usp=sharing" target="_blank" class="certification-link">View Certificate</a>
+            </div>
           </div>
+          <button class="scroll-arrow right-arrow certifications-right-arrow" aria-label="Scroll right">&#10095;</button>
         </div>
       </div>
     </section>
@@ -153,6 +211,14 @@
       <div class="container">
         <h2>Contact Me</h2>
         <p>You can reach me at: <a href="mailto:waleedmonim18@gmail.com">waleedmonim18@gmail.com</a></p>
+        <p>Or connect with me on:</p>
+        <ul class="social-links">
+          <li><a href="https://www.linkedin.com/in/waleed-monim" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        </ul>
+        <p>Follow some of my work on Instagram (Coding & AI Content)</p>
+        <ul class="social-links">
+          <li><a href="https://www.instagram.com/dailybyte01" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
       </div>
     </section>
   </main>
